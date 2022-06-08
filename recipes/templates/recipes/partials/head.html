@@ -80,7 +80,7 @@
         body {
             font-size: 1.6rem;
             font-family: var(--font-primary);
-            background-color: #c3c3c3;
+            background-color: var(--color-gray-1);
         }
         .container{
             max-width: 144rem;
@@ -105,6 +105,41 @@
         
         .header-logo__text{
             font-family: 'Roboto Slab', serif;
+        }
+        .search-form{
+            position: relative;
+            border: .2rem solid var(--color-primary-dark);
+            max-width: 64rem;
+            margin: 0 auto;
+            border-radius: 0.5rem;
+            transition: all 300ms ease-in-out ;
+        }
+        .search-form__input,
+        .search-form__button{
+            border: none;
+            background: none;
+            outline: none;
+            padding: 1rem;
+            transition: all 300ms ease-in-out ;
+        }
+        .search-form__input{
+            width: 100%;
+            padding-right: 3rem;
+        }
+        .search-form__button{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .search-form__button:focus{
+            background: rgba(0,0,0,.1)
+        }
+        .search-form:focus-within{
+            border-color: var(--color-primary);
+            background-color: var(--color-white);
+        }
+        .search-form:focus-within .search-form__button{
+            color: var(--color-primary);
         }
     </style>
 </head>
